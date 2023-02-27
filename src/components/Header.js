@@ -14,7 +14,9 @@ const Header = () => {
                     <li>Shop</li>
                 </Link>
             </ul>
-            <div className="shopping-cart">Cart (0)</div>
+            <Link to="/cart">
+                <div className="shopping-cart">Cart (0)</div>
+            </Link>
         </div>
     )
 }
