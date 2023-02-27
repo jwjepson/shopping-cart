@@ -1,12 +1,13 @@
 import Header from "./components/Header";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
 
 function App() {
   return (
-    <>
+    <div class="App">
       <BrowserRouter>
       <Header/>
           <Routes>
@@ -15,7 +16,8 @@ function App() {
               <Route path="/cart" element={<Cart/>}/>
           </Routes>
       </BrowserRouter>
-    </>
+      <Footer/>
+    </div>
   );
 }
 
