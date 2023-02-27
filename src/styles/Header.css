@@ -3,6 +3,12 @@ body {
     padding: 0;
 }
 
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .header {
     width: 100vw;
     height: 110px;
@@ -25,4 +31,15 @@ body {
 a {
     text-decoration: none;
     color: black;
+}
+
+footer {
+    background-color: orange;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
 }
