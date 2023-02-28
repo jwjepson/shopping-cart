@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Home.css";
 import DonutSplash from "../images/donut-splash.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -12,9 +13,11 @@ const Home = () => {
                         Our bakery shop offers a wide variety of flavors that will surely satisfy
                         your sweet cravings.
                     </div>
-                    <button className="menu-button" type="button">Menu</button>
+                    <Link to="/shop">
+                        <button className="menu-button" type="button">Menu</button>
+                    </Link>
                 </div>
-                <img className="donut-splash" src={DonutSplash} alt="Picture of donuts"></img>
+                <img className="donut-splash" src={DonutSplash} alt="Donuts"></img>
             </div>
         </div>
     )
