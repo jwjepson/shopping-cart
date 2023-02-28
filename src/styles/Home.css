@@ -1,5 +1,58 @@
+@font-face {
+    font-family: ShopDescription;
+    src: url(../fonts/PlayFair.ttf);
+}
+
+
 .main {
     display: flex;
-    background-color: pink;
+    justify-content: center;
+    background-color: #FBFBFB;
     flex: 1;
+}
+
+.left-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home {
+    height: 100%;
+    width: 950px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donut-splash {
+    height: 500px;
+    box-shadow: inset 0px 0px 40px 40px #FBFBFB;
+}
+
+.home-title {
+    font-size: 70px;
+    font-family: Shop;
+    margin-top: 150px;
+    color: #FD041C;
+    padding: 20px;
+}
+
+.home-description {
+    font-size: 20px;
+    font-family: ShopDescription;
+    color: black;
+    padding: 20px;
+}
+
+.menu-button {
+    padding: 5px;
+    width: 80px;
+    height: 50px;
+    background-color: #FD041C;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-family: ShopDescription;
 }
