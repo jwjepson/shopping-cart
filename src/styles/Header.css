@@ -43,7 +43,7 @@ a {
 }
 
 footer {
-    background-color: orange;
+    background-color: #FD041C;
     height: 50px;
     width: 100vw;
     display: flex;
@@ -51,4 +51,10 @@ footer {
     align-items: center;
     font-size: 20px;
     gap: 10px;
+    color: white;
+    opacity: 70%;
+}
+
+footer > a {
+    color: white;
 }
