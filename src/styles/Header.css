@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Shop;
+    src: url("../fonts/QuickKiss.ttf");
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -12,10 +18,11 @@ body {
 .header {
     width: 100vw;
     height: 110px;
-    background-color: orange;
+    background-color: #FBFBFB;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 2px solid #DDDDDD;
 }
 
 .nav-bar {
@@ -25,12 +32,14 @@ body {
 }
 
 .logo {
-    font-size: 40px;
+    font-size: 60px;
+    font-family: Shop;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #555F6A;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 footer {
