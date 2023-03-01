@@ -12,7 +12,7 @@ const Cart = (props) => {
         <div className="main">
             {props.cartItems.length > 0 ?
             <div className="cart">
-                <h2>Shopping Cart</h2>
+                <h2 className="shopping-cart-title">Shopping Cart</h2>
                 <div className="cart-items">
                     <div className="cart-headers">
                         <div className="item-name">Item</div>
