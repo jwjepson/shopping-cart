@@ -31,7 +31,7 @@ const Cart = (props) => {
                                     {item.quantity}
                                 </div>
                                 <button onClick={props.handleQuantity} className="quantity-increment" name="increment" data-id={item.id} type="button">+</button>
-                                </div>
+                            </div>
                             <div className="item-price">{"$" + (item.price * item.quantity).toFixed(2)}</div>
                         </div>
                     ))}
