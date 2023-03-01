@@ -18,7 +18,7 @@ function App() {
     const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
 
     if (existingItem) {
-      const updatedItems = cartItems.map((cartItem) => {
+      let updatedItems = cartItems.map((cartItem) => {
         if (cartItem.id === item.id) {
           return {...cartItem, quantity: cartItem.quantity + 1};
         } else {
@@ -34,18 +34,25 @@ function App() {
   const handleQuantity = (e) => {
     console.log(e.target.name);
     const itemId = parseInt(e.target.dataset.id);
-    const updatedItems = cartItems.map((cartItem) => {
+    let updatedItems = cartItems.map((cartItem) => {
       if (cartItem.id === itemId) {
         if (e.target.name === "decrement") {
           return {...cartItem, quantity: cartItem.quantity - 1};
         } else if (e.target.name === "increment") {
           return {...cartItem, quantity: cartItem.quantity + 1};
+        } else {
+          return cartItem;
         }
       } else {
         return cartItem;
       }
     });
+    updatedItems = removeZeroQuantityItems(updatedItems);
     setCartItems(updatedItems);
+  }
+
+  const removeZeroQuantityItems = (items) => {
+    return items.filter(item => item.quantity > 0);
   }
 
   return (
