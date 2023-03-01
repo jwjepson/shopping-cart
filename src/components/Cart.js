@@ -25,9 +25,14 @@ const Cart = (props) => {
                                 </div>
                                 <button onClick={props.handleQuantity} className="quantity-increment" name="increment" data-id={item.id} type="button">+</button>
                                 </div>
-                            <div className="item-price">{item.price}</div>
+                            <div className="item-price">{"$" + (item.price * item.quantity).toFixed(2)}</div>
                         </div>
                     ))}
+                </div>
+                <div className="checkout-container">
+                    <div className="total">Total:</div>
+                    <div className="total-price">$5.99</div>
+                    <button className="checkout-button" type="button">Check Out</button>
                 </div>
             </div>
         </div>
