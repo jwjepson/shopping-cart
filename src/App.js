@@ -30,6 +30,24 @@ function App() {
       setCartItems([...cartItems, {...item, quantity: 1}]);
     }
   }
+
+  const handleQuantity = (e) => {
+    console.log(e.target.name);
+    const itemId = parseInt(e.target.dataset.id);
+    const updatedItems = cartItems.map((cartItem) => {
+      if (cartItem.id === itemId) {
+        if (e.target.name === "decrement") {
+          return {...cartItem, quantity: cartItem.quantity - 1};
+        } else if (e.target.name === "increment") {
+          return {...cartItem, quantity: cartItem.quantity + 1};
+        }
+      } else {
+        return cartItem;
+      }
+    });
+    setCartItems(updatedItems);
+  }
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -37,7 +55,7 @@ function App() {
           <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/shop" element={<Shop addItemToCart={addItemToCart} incrementCartCount={incrementCartCount}/>}/>
-              <Route path="/cart" element={<Cart cartItems={cartItems}/>}/>
+              <Route path="/cart" element={<Cart handleQuantity={handleQuantity} cartItems={cartItems}/>}/>
           </Routes>
       </BrowserRouter>
       <Footer/>
