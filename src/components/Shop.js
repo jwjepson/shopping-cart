@@ -8,7 +8,7 @@ import Donut4 from "../images/donut4.png";
 import Donut5 from "../images/donut5.png";
 
 
-const Shop = ({ incrementCartCount}) => {
+const Shop = ({ incrementCartCount, addItemToCart}) => {
     const items = [
         {
             name: "Donut 1",
@@ -42,8 +42,13 @@ const Shop = ({ incrementCartCount}) => {
         }
     ];
 
-    const handleAddToCart = () => {
+    const handleAddToCart = (e) => {
         incrementCartCount();
+        let item = items.find((item) => {
+            return item.id === parseInt(e.target.dataset.id);
+        });
+        console.log(item);
+        addItemToCart(item);
     }
 
     return (
@@ -52,7 +57,7 @@ const Shop = ({ incrementCartCount}) => {
                 <h2>Welcome to the Shop!</h2>
                 <div className="items">
                     {items.map((item) => (
-                        <Item name={item.name} price={item.price} img={item.img} key={item.id} handleAddToCart={handleAddToCart}/>
+                        <Item name={item.name} id={item.id} price={item.price} img={item.img} key={item.id} handleAddToCart={handleAddToCart}/>
                     ))}
                 </div>
             </div>
