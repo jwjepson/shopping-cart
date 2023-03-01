@@ -7,12 +7,11 @@ import Cart from "./components/Cart";
 import React, {useState} from "react";
 
 function App() { 
-  const [cartCount, setCartCount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
 
-  const incrementCartCount = () => {
-    setCartCount(cartCount + 1);
-  };
+  const totalItemsCount = cartItems.reduce((accumulator, currentItem) => {
+    return accumulator + (currentItem.quantity);
+  }, 0);
 
   const addItemToCart = (item) => {
     const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
@@ -58,10 +57,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Header cartCount={cartCount}/>
+      <Header cartCount={totalItemsCount}/>
           <Routes>
               <Route path="/" element={<Home/>}/>
-              <Route path="/shop" element={<Shop addItemToCart={addItemToCart} incrementCartCount={incrementCartCount}/>}/>
+              <Route path="/shop" element={<Shop addItemToCart={addItemToCart}/>}/>
               <Route path="/cart" element={<Cart handleQuantity={handleQuantity} cartItems={cartItems}/>}/>
           </Routes>
       </BrowserRouter>
