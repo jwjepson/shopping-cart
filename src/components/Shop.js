@@ -53,7 +53,7 @@ const Shop = ({ incrementCartCount, addItemToCart}) => {
     return (
         <div className="main">
             <div className="menu">
-                <h2>Welcome to the Shop!</h2>
+                <h2>Donuts</h2>
                 <div className="items">
                     {items.map((item) => (
                         <Item name={item.name} id={item.id} price={"$" + item.price.toFixed(2)} img={item.img} key={item.id} handleAddToCart={handleAddToCart}/>
