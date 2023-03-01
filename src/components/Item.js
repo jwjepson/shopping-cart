@@ -1,16 +1,15 @@
 import React from "react";
 import "../styles/Item.css";
-import Donut1 from "../images/donut1.png";
 
-const Item = () => {
+const Item = (props) => {
     return (
         <div className="item-container">
             <div className="image-container">
-                <img className="item-image" src={Donut1} alt="Donut 1"></img>
+                <img className="item-image" src={props.img} alt={props.name}></img>
             </div>
             <div className="item-info">
-                <div className="item-title">Delicious Donut</div>
-                <div className="item-price">$5.59</div>
+                <div className="item-title">{props.name}</div>
+                <div className="item-price">{props.price}</div>
             </div>
             <button className="add-to-cart-button" type="button">Add to Cart</button>
         </div>
