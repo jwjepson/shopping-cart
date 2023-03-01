@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Item.css";
 
 const Item = (props) => {
+
     return (
         <div className="item-container">
             <div className="image-container">
@@ -11,7 +12,7 @@ const Item = (props) => {
                 <div className="item-title">{props.name}</div>
                 <div className="item-price">{props.price}</div>
             </div>
-            <button className="add-to-cart-button" type="button">Add to Cart</button>
+            <button onClick={props.handleAddToCart} className="add-to-cart-button" type="button">Add to Cart</button>
         </div>
     )
 }
