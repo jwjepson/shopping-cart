@@ -7,7 +7,7 @@ import Cart from "./components/Cart";
 
 function App() {
   return (
-    <div class="App">
+    <div className="App">
       <BrowserRouter>
       <Header/>
           <Routes>
