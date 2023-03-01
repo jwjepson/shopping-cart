@@ -18,7 +18,13 @@ const Cart = (props) => {
                                 <img className="cart-item-image" alt={item.name} src={item.img}></img>
                                 <div>{item.name}</div>
                             </div>
-                            <div className="item-quantity">{item.quantity}</div>
+                            <div className="item-quantity">
+                                <button className="quantity-decrement" data-id={item.id} type="button">-</button>
+                                <div className="quantity">
+                                    {item.quantity}
+                                </div>
+                                <button className="quantity-increment" type="button">+</button>
+                                </div>
                             <div className="item-price">{item.price}</div>
                         </div>
                     ))}

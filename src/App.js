@@ -30,7 +30,6 @@ function App() {
       setCartItems([...cartItems, {...item, quantity: 1}]);
     }
   }
-
   return (
     <div className="App">
       <BrowserRouter>
