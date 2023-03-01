@@ -12,7 +12,7 @@ const Item = (props) => {
                 <div className="item-title">{props.name}</div>
                 <div className="item-price">{props.price}</div>
             </div>
-            <button onClick={props.handleAddToCart} className="add-to-cart-button" type="button">Add to Cart</button>
+            <button onClick={props.handleAddToCart} data-id={props.id} className="add-to-cart-button" type="button">Add to Cart</button>
         </div>
     )
 }
