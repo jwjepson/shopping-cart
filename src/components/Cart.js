@@ -2,6 +2,11 @@ import React from "react";
 import "../styles/Cart.css";
 
 const Cart = (props) => {
+
+    const totalPrice = props.cartItems.reduce((accumulator, currentItem) => {
+        return accumulator + (currentItem.price * currentItem.quantity);
+    }, 0).toFixed(2);
+
     return (
         <div className="main">
             <div className="cart">
@@ -31,7 +36,7 @@ const Cart = (props) => {
                 </div>
                 <div className="checkout-container">
                     <div className="total">Total:</div>
-                    <div className="total-price">$5.99</div>
+                    <div className="total-price">${totalPrice}</div>
                     <button className="checkout-button" type="button">Check Out</button>
                 </div>
             </div>
