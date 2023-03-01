@@ -18,29 +18,30 @@ const Shop = () => {
         },
         {
             name: "Donut 2",
-            price: "4.30",
+            price: "$4.30",
             img: Donut2,
             id: 2,
         },
         {
             name: "Donut 3",
-            price: "3.50",
+            price: "$3.50",
             img: Donut3,
             id: 3,
         },
         {
             name: "Donut 4",
-            price: "6.20",
+            price: "$6.20",
             img: Donut4,
             id: 4,
         },
         {
             name: "Donut 5",
-            price: "5.50",
+            price: "$5.50",
             img: Donut5,
             id: 5,
         }
     ];
+
     return (
         <div className="main">
             <div className="menu">
