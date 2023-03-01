@@ -15,7 +15,11 @@ const Header = (props) => {
                 </Link>
             </ul>
             <Link to="/cart">
-                <div className="shopping-cart">Cart ({props.cartCount})</div>
+                <div className="cart-svg">
+                    <div className="badge">
+                        <div className="cart-counter">{props.cartCount}</div>
+                    </div>
+                </div>
             </Link>
         </div>
     )
