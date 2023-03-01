@@ -43,7 +43,6 @@ const Shop = ({ incrementCartCount, addItemToCart}) => {
     ];
 
     const handleAddToCart = (e) => {
-        incrementCartCount();
         let item = items.find((item) => {
             return item.id === parseInt(e.target.dataset.id);
         });
