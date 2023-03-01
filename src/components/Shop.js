@@ -12,31 +12,31 @@ const Shop = ({ incrementCartCount, addItemToCart}) => {
     const items = [
         {
             name: "Donut 1",
-            price: "$5.30",
+            price: 5.35,
             img: Donut1,
             id: 1,
         },
         {
             name: "Donut 2",
-            price: "$4.30",
+            price: 4.30,
             img: Donut2,
             id: 2,
         },
         {
             name: "Donut 3",
-            price: "$3.50",
+            price: 3.50,
             img: Donut3,
             id: 3,
         },
         {
             name: "Donut 4",
-            price: "$6.20",
+            price: 6.20,
             img: Donut4,
             id: 4,
         },
         {
             name: "Donut 5",
-            price: "$5.50",
+            price: 5.50,
             img: Donut5,
             id: 5,
         }
@@ -57,7 +57,7 @@ const Shop = ({ incrementCartCount, addItemToCart}) => {
                 <h2>Welcome to the Shop!</h2>
                 <div className="items">
                     {items.map((item) => (
-                        <Item name={item.name} id={item.id} price={item.price} img={item.img} key={item.id} handleAddToCart={handleAddToCart}/>
+                        <Item name={item.name} id={item.id} price={"$" + item.price.toFixed(2)} img={item.img} key={item.id} handleAddToCart={handleAddToCart}/>
                     ))}
                 </div>
             </div>
