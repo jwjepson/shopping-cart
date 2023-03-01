@@ -8,7 +8,7 @@ import Donut4 from "../images/donut4.png";
 import Donut5 from "../images/donut5.png";
 
 
-const Shop = () => {
+const Shop = ({ incrementCartCount}) => {
     const items = [
         {
             name: "Donut 1",
@@ -42,13 +42,17 @@ const Shop = () => {
         }
     ];
 
+    const handleAddToCart = () => {
+        incrementCartCount();
+    }
+
     return (
         <div className="main">
             <div className="menu">
                 <h2>Welcome to the Shop!</h2>
                 <div className="items">
                     {items.map((item) => (
-                        <Item name={item.name} price={item.price} img={item.img} key={item.id}/>
+                        <Item name={item.name} price={item.price} img={item.img} key={item.id} handleAddToCart={handleAddToCart}/>
                     ))}
                 </div>
             </div>
