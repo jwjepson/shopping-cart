@@ -105,3 +105,26 @@
     background-color: #E40016;
     cursor: pointer;
 }
+
+.empty-cart-image {
+    height: 100px;
+    width: 300px;
+}
+
+.empty-cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    font-family: ShopDescription;
+}
+
+.empty-cart-header {
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.empty-cart-description {
+    margin-top: 20px;
+}
