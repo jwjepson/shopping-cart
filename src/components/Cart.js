@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Cart.css";
+import {ReactComponent as EmptyShoppingCartSvg } from "../images/shoppingCart.svg";
 
 const Cart = (props) => {
 
@@ -9,6 +10,7 @@ const Cart = (props) => {
 
     return (
         <div className="main">
+            {props.cartItems.length > 0 ?
             <div className="cart">
                 <h2>Shopping Cart</h2>
                 <div className="cart-items">
@@ -40,6 +42,13 @@ const Cart = (props) => {
                     <button className="checkout-button" type="button">Check Out</button>
                 </div>
             </div>
+            :
+            <div className="empty-cart-container">
+                <EmptyShoppingCartSvg className="empty-cart-image" alt="Empty Shopping Cart"/>
+                <div className="empty-cart-header">Your cart is empty</div>
+                <div className="empty-cart-description">Looks like you haven't added anything to your cart yet</div>
+            </div>
+            }
         </div>
     )
 }
