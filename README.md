@@ -1,4 +1,4 @@
-# Fake Shopping Cart Application
+# Shopping Cart Application
 
 ![Home](https://user-images.githubusercontent.com/33581109/222515086-a48e3804-7ee7-4458-aa9b-f835f7041f72.png)
 ![Shop](https://user-images.githubusercontent.com/33581109/222515112-556ea71c-53d0-4800-9fb6-fd25c46096a9.png)
