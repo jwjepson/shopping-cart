@@ -19,7 +19,7 @@ const Header = (props) => {
             <Link to="/cart">
                 <div className="cart-svg">
                     <div className="badge">
-                        <div data-testid="cart-counter" className="cart-counter">{props.cartCount}</div>
+                        <div className="cart-counter">{props.cartCount}</div>
                     </div>
                 </div>
             </Link>
