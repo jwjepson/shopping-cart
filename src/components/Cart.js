@@ -38,7 +38,7 @@ const Cart = (props) => {
                 </div>
                 <div className="checkout-container">
                     <div className="total">Total:</div>
-                    <div className="total-price">${totalPrice}</div>
+                    <div data-testid="total-price" className="total-price">${totalPrice}</div>
                     <button className="checkout-button" type="button">Check Out</button>
                 </div>
             </div>
