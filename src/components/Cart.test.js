@@ -39,7 +39,6 @@ it("correctly calculates total price", () => {
         },
     ];
     render(<Cart handleQuantity={jest.fn()} cartItems={cartItems}/>);
-    screen.debug();
     const totalPriceDiv = screen.getByTestId("total-price");
     expect(totalPriceDiv.textContent).toBe("$9.65");
 })
