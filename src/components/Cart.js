@@ -20,7 +20,7 @@ const Cart = (props) => {
                         <div className="item-price">Price</div>
                     </div>
                     {props.cartItems.map((item) => (
-                        <div className="cart-item">
+                        <div key={item.id} className="cart-item">
                             <div className="item-name">
                                 <img className="cart-item-image" alt={item.name} src={item.img}></img>
                                 <div>{item.name}</div>
