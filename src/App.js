@@ -56,7 +56,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/shopping-cart">
       <Header cartCount={totalItemsCount}/>
           <Routes>
               <Route path="/" element={<Home/>}/>
